@@ -8,13 +8,15 @@ cask "opencleaner" do
   homepage "https://github.com/BuiHung1612/OpenCleaner"
 
   auto_updates true
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "OpenCleaner.app"
 
   # not notarized (no Apple Developer account): without this macOS blocks the first launch
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/OpenCleaner.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/OpenCleaner.app"],
+        writable_paths: ["{{appdir}}/OpenCleaner.app"]
   end
 
   zap trash: [
