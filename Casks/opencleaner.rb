@@ -1,6 +1,7 @@
+# Template: the release workflow fills in the version and sha256 and attaches the result to the release.
 cask "opencleaner" do
-  version "0.3.1"
-  sha256 "22ea862e535c97a7e80ef2960689bf18f25e9846ac10c63bf8750df8e52c73a0"
+  version "0.3.2"
+  sha256 "2e1ec490019056a9b0f7235fe4d13fe1ad5cb4f4d4afce818855996d1ac327a3"
 
   url "https://github.com/BuiHung1612/OpenCleaner/releases/download/v#{version}/OpenCleaner.dmg"
   name "OpenCleaner"
