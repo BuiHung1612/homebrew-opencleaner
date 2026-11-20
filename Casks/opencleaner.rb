@@ -1,6 +1,6 @@
 cask "opencleaner" do
-  version "0.3.3"
-  sha256 "13673b2cd29ce2664b82e22e654f2de807b52a0202b310bf761aeebf1ccd98e7"
+  version "0.3.4"
+  sha256 "031dda17abf81a738ebc2aca7b6d41f2ba627077296e5282bde85dd941922d77"
 
   url "https://github.com/BuiHung1612/OpenCleaner/releases/download/v#{version}/OpenCleaner.dmg"
   name "OpenCleaner"
